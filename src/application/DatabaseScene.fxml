@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<GridPane prefHeight="550.0" prefWidth="500.0" styleClass="root" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.DatabaseController">
+    <padding>
+        <Insets topRightBottomLeft="25"/>
+    </padding>
+    <Text id="welcomeText" text="Cigars database" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <padding>
+            <Insets top="25" bottom="25"/>
+        </padding>
+        <children>
+            <TextField fx:id="searchTextField" promptText="Search"/>
+            <RadioButton fx:id="insertIntoRadioBtn" mnemonicParsing="false" text="Insert Into">
+                <toggleGroup>
+                    <ToggleGroup fx:id="toggleGroup"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="updateRadioBtn" mnemonicParsing="false" text="Update" toggleGroup="$toggleGroup"/>
+            <RadioButton fx:id="deleteRadioBtn" mnemonicParsing="false" text="Delete" toggleGroup="$toggleGroup"/>
+        </children>
+    </HBox>
+
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <children>
+            <TableView fx:id="tableView" prefWidth="302">
+                <columns>
+                    <TableColumn fx:id="cigarIdColumn" visible="false"/>
+
+                    <TableColumn fx:id="userIdColumn" visible="false"/>
+
+                    <TableColumn fx:id="brandColumn" prefWidth="150" text="Brand"/>
+
+                    <TableColumn fx:id="priceColumn" prefWidth="150" text="Price"/>
+
+                </columns>
+            </TableView>
+
+            <VBox alignment="TOP_RIGHT" spacing="10">
+                <children>
+                    <TextField fx:id="cigarIdTextField" visible="false"/>
+                    <TextField fx:id="userIdTextField" visible="false"/>
+                    <TextField fx:id="brandTextField" promptText="Brand"/>
+                    <TextField fx:id="priceTextField" promptText="Price"/>
+
+                    <Button fx:id="insertIntoBtn" mnemonicParsing="false" onAction="#insertBtnAction" text="Insert new cigar"/>
+
+                    <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateBtnAction" text="Update cigar"/>
+
+                    <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBtnAction" text="Delete cigar"/>
+
+                    <Text fx:id="errorMessage"/>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+
+</GridPane>

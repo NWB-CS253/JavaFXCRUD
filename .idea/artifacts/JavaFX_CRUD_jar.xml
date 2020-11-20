@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaFX CRUD:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaFX_CRUD_jar</output-path>
+    <root id="archive" name="JavaFX CRUD.jar">
+      <element id="module-output" name="JavaFX CRUD" />
+      <element id="extracted-dir" path="/usr/share/openjfx/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/share/openjfx/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/share/openjfx/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/share/openjfx/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/share/openjfx/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/mariadb-java-client-2.7.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/share/openjfx/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/usr/share/openjfx/lib/javafx.fxml.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
